@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Tech QA Specialist</title>
+    <!-- Load Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Arial Font -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* Changed font to Arial */
+            background-color: #1a1a1a; /* Dark background */
+            color: #e5e7eb; /* Light grey text */
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            height: 4px;
+            background-color: #a7f3d0; /* Mint accent line */
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen">
+
+    <div class="max-w-7xl mx-auto p-4 md:p-8 lg:p-12">
+
+        <!-- Header / Logo -->
+        <header class="mb-12">
+            <h1 class="text-3xl font-extrabold text-white tracking-tight">
+                Vibes <span class="text-green-400">|</span> Technical QA & Validation
+            </h1>
+        </header>
+
+        <!-- About Me Section -->
+        <section id="about" class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-20">
+            
+            <!-- Profile Photo (Placeholder) -->
+            <div class="md:col-span-1 flex justify-center md:justify-start">
+                <!-- 
+                    *** ACTION REQUIRED BEFORE DEPLOYMENT ***
+                    1. Create a folder named 'images' in your repository root.
+                    2. Place your photo (pfp.jpg) inside that folder.
+                    3. CHANGE the 'src' attribute below from the placeholder URL 
+                       to the local file path: src="images/pfp.jpg" 
+                -->
+                <img src="https://placehold.co/300x350/22c55e/1e293b?text=QA+Specialist" 
+                     alt="Profile photo of a music tech QA specialist working with a laptop and MIDI controller" 
+                     class="rounded-xl shadow-2xl object-cover h-[350px] w-[300px] border-4 border-green-400">
+            </div>
+
+            <!-- About Content -->
+            <div class="md:col-span-2">
+                <h2 class="section-title text-white">About Me</h2>
+                <p class="text-lg leading-relaxed text-gray-300">
+                    I partner with <strong class="text-white">music tech companies</strong> and <strong class="text-white">independent music creators</strong> to accelerate their development cycle and guarantee product readiness through specialized QA. I specialize in diagnosing and isolating the root cause of bugs in <strong class="text-green-400">plugins, presets, and sample packs</strong> so they can be confidently delivered to market.
+                </p>
+                <p class="mt-4 text-base text-gray-400">
+                    My approach is simple yet rigorous: I test like a producer, but document like an engineer. My goal is to catch the critical issues that affect workflow and sound integrity before they ever reach your users.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="mb-20">
+            <h2 class="section-title text-center mx-auto w-fit">My Services</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- 1. QA For Producers -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-green-500/30 transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-bold text-green-400 mb-4">QA For Producers</h3>
+                    <p class="text-gray-300 mb-6">
+                        Targeted QA focused on the end-user experience, ensuring your library feels professional and reliable.
+                    </p>
+                    <h4 class="text-xl font-semibold text-white mb-3">Serum Preset Integrity Check</h4>
+                    <ul class="space-y-2 text-gray-400 list-disc list-inside ml-2">
+                        <li>Checking for broken links and corrupted files.</li>
+                        <li>Ensuring consistent metadata and correct naming conventions.</li>
+                        <li>Verifying flawless sample playback (loops, fades, crossfades).</li>
+                        <li>Testing category, tag, and bank organization.</li>
+                    </ul>
+                </div>
+
+                <!-- 2. QA For Developers -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-green-500/30 transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-bold text-green-400 mb-4">QA For Developers</h3>
+                    <p class="text-gray-300 mb-6">
+                        A technical deep dive to elevate your product's stability, audio integrity, and performance before release.
+                    </p>
+                    <h4 class="text-xl font-semibold text-white mb-3">Instruments & Effects Deep Dive</h4>
+                    <ul class="space-y-2 text-gray-400 list-disc list-inside ml-2">
+                        <li>**Core Stability:** Efficient CPU usage and reliable cross-platform performance (DAWs/OS).</li>
+                        <li>**Signal-Path Integrity:** Verified dry/wet accuracy and consistent signal leveling.</li>
+                        <li>**Modulation & Sync:** Accurate LFO/host sync and smooth parameter automation.</li>
+                        <li>**Edge Cases:** Rigorous testing of min/max settings and unconventional combinations.</li>
+                    </ul>
+                </div>
+
+                <!-- 3. Product Documentation & Technical Writing -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-green-500/30 transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-bold text-green-400 mb-4">Product Documentation</h3>
+                    <p class="text-gray-300 mb-6">
+                        Clear, professional technical writing to maximize user adoption and minimize support tickets.
+                    </p>
+                    <h4 class="text-xl font-semibold text-white mb-3">Content Strategy & Technical Writing</h4>
+                    <ul class="space-y-2 text-gray-400 list-disc list-inside ml-2">
+                        <li>Comprehensive User Manuals & Onboarding Guides.</li>
+                        <li>Detailed Patch Notes and public Release Documentation.</li>
+                        <li>Review and creation of in-app help text and tooltips.</li>
+                        <li>Accurate Technical Specifications for power users.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Call to Action / Contact -->
+        <section id="contact" class="text-center py-16 bg-gray-900 rounded-2xl shadow-2xl border-2 border-green-500/50">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Ready to Guarantee Your Product's Quality?</h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Let's discuss how specialized QA can accelerate your release timeline and enhance your brand's reputation for quality.
+            </p>
+            <!-- REMEMBER TO UPDATE THE EMAIL ADDRESS BELOW -->
+            <a href="mailto:aaron@pluginqapro.com" class="inline-block px-8 py-4 text-lg font-bold text-gray-900 bg-green-400 rounded-full shadow-lg hover:bg-green-300 transition duration-300 transform hover:scale-105">
+                Get a Free Consultation
+            </a>
+            <p class="mt-6 text-sm text-gray-500">
+                You can also reach me directly at <a href="mailto:aaron@pluginqapro.com" class="underline hover:text-green-400">aaron@pluginqapro.com</a>
+            </p>
+        </section>
+
+    </div>
+
+    <!-- Simple Footer -->
+    <footer class="text-center py-6 mt-10 text-gray-500 text-sm">
+        &copy; 2024 Technical QA & Validation. All rights reserved.
+    </footer>
+
+</body>
+</html>
