@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From MIDI to Sound: Building a Tone Generator Step-by-Step - PluginProof</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #e5e7eb;
+        }
+        .content-container h2, .content-container h3 {
+            color: #a7f3d0; /* Mint color for headers */
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .content-container p {
+            margin-bottom: 1rem;
+            line-height: 1.75;
+        }
+        .code-snippet {
+            background-color: #0d0d0d;
+            padding: 1rem;
+            border-left: 4px solid #a7f3d0;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            font-family: monospace;
+            color: #d1d5db;
+        }
+        .cta-banner {
+            background-color: #252525;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #3d3d3d;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="max-w-4xl mx-auto p-4 md:p-8 lg:p-12">
+        
+        <header class="mb-10 text-center">
+            <a href="index.html" class="text-green-400 hover:text-green-300 text-sm font-semibold uppercase tracking-widest">&larr; Back to PluginProof Services</a>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mt-4 tracking-tight">
+                From MIDI to Sound: Building a Tone Generator Step-by-Step
+            </h1>
+            <p class="text-lg text-gray-400 mt-2">By Aaron Shippey | July 13, 2025</p>
+        </header>
+
+        <div class="content-container text-gray-300">
+
+            <p class="text-xl font-medium mb-8 border-l-4 border-green-400 pl-4 italic">
+                I recently built a tone generator—my first real dive into making my own JSFX plugin. It's a fundamental exercise, but it proves the core concept behind all digital sound: simulation.
+            </p>
+
+            <p>
+                A **tone generator** is simple in concept: it’s a type of **oscillator**. If you’re unfamiliar with that term, just think of something that repeats in cycles—kind of like a pulse or a wave. The complexity of any synthesizer comes down to how accurately and efficiently it runs these cycles.
+            </p>
+            
+            <figure class="my-6">
+                <img src="./images/pulse-wave.jpg" alt="Illustration of a pulse waveform on a graph" class="w-full rounded-lg shadow-xl">
+                <figcaption class="text-center text-sm text-gray-500 mt-2">
+                    A hospital-style pulse waveform is a perfect real-world example of an oscillating signal.
+                </figcaption>
+            </figure>
+
+            <h2>Step 1: User Input — Picking a Note (MIDI)</h2>
+            
+            <p>
+                First, the user picks a note using a slider or MIDI controller. This note is received in **MIDI format**, which is just a number between 0 and 127. For example, 60 is Middle C, 69 is A4 (A above middle C), etc. However, MIDI numbers aren’t in Hertz (the unit we use for frequency), so we need to **convert** that data.
+            </p>
+
+            <h2>Step 2: Convert MIDI to Frequency (Hertz)</h2>
+
+            <p>
+                To turn that MIDI note into a real pitch, we use a simple exponential formula. This formula finds the target pitch by shifting up or down from a standard reference frequency, usually $\mathbf{440 Hz}$ (the pitch of A4).
+            </p>
+            
+            <div class="code-snippet">
+                $\text{frequency} = 440 \times 2^{\left(\frac{\text{MIDI} - 69}{12}\right)}$
+            </div>
+
+            <p>
+                So if the user selects MIDI note 60 (C4), the formula figures out the vibrating speed we want—in this case, approximately $\mathbf{261.63 Hz}$. That’s the actual rate of vibration.
+            </p>
+
+            <h2>Step 3: Calculate Rotation Speed (Angular Velocity)</h2>
+            
+            <p>
+                Now that we know the frequency, we calculate how fast our waveform should move forward—this is called **angular velocity ($\omega$)**. It tells us how quickly we spin through one full wave cycle (a circle). This is crucial because it’s the number we use for every sample.
+            </p>
+
+            <div class="code-snippet">
+                $\omega = 2 \times \pi \times \frac{\text{frequency}}{\text{sampleRate}}$
+            </div>
+
+            <p>
+                This calculation lets us figure out how much to advance our pointer each time the computer processes a tiny chunk of audio (a **sample**). Most modern systems process audio at a **sample rate** of $\mathbf{44,100}$ samples per second.
+            </p>
+
+            <h2>Step 4: Keep Track of Where We Are — Phase</h2>
+            
+            <p>
+                To know what part of the wave we’re at, we use a variable called **phase ($\phi$)**. Think of it like a pointer moving around a circle. Every single sample, we move the phase forward just a little bit by adding the angular velocity ($\omega$):
+            </p>
+
+            <div class="code-snippet">
+                $\phi += \omega$
+            </div>
+
+            <p>
+                This is how we simulate time passing in very small, consistent steps. **Instability and sync bugs often happen here**—if the phase calculation is not sample-accurate across different DAWs, the sound will break.
+            </p>
+
+            <h2>Step 5: Create the Sound (Sine Function)</h2>
+
+            <p>
+                Finally, we take the current phase ($\phi$) and pass it into a sine function:
+            </p>
+            
+            <div class="code-snippet">
+                $\text{output} = \sin(\phi)$
+            </div>
+            
+            <p>
+                That simple math gives us a perfectly smooth wave—a **sine wave**—which is the sound! The faster we spin through the wave (higher frequency), the higher the perceived pitch.
+            </p>
+
+            <h2 class="text-3xl font-extrabold text-white">So What’s Really Happening?</h2>
+            
+            <ul class="list-disc list-inside ml-4 text-lg space-y-2">
+                <li>The user picks a note (MIDI number).</li>
+                <li>We figure out how fast that note vibrates (Hertz).</li>
+                <li>We simulate that vibration by looping through tiny audio samples.</li>
+                <li>We create the wave by calculating points on a circle (a sine wave).</li>
+            </ul>
+
+            <p class="mt-6">
+                It sounds like a lot, but it’s really just a few numbers being added together over and over again. Understanding this core loop is the key to both **building**—and more importantly—**breaking and testing** audio software efficiently.
+            </p>
+
+            <div class="cta-banner mt-12 text-center">
+                <h3 class="text-2xl font-extrabold text-white mb-3">
+                    Your Plugin's DSP is Complex. Don't Let It Fail on Step 4.
+                </h3>
+                <p class="text-lg text-gray-400 mb-6">
+                    Our **Cross-DAW Verification** tests these core principles (Phase, Sample Rate, and Performance) across five host environments to guarantee stability before launch.
+                </p>
+                <a href="index.html#contact" class="inline-block px-8 py-3 text-base font-bold text-gray-900 bg-green-400 rounded-full shadow-lg hover:bg-green-300 transition duration-300">
+                    Secure Your Audit Slot Now
+                </a>
+            </div>
+        </div>
+
+        <footer class="text-center py-6 mt-10 text-gray-400 text-sm">
+            <a href="index.html" class="hover:text-green-400 transition-colors">PluginProof Home</a>
+            </footer>
+    </div>
+</body>
+</html>
