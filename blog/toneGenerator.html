@@ -43,7 +43,7 @@
     <div class="max-w-4xl mx-auto p-4 md:p-8 lg:p-12">
         
         <header class="mb-10 text-center">
-            <a href="index.html" class="text-green-400 hover:text-green-300 text-sm font-semibold uppercase tracking-widest">&larr; Back to PluginProof Services</a>
+            <a href="../index.html" class="text-green-400 hover:text-green-300 text-sm font-semibold uppercase tracking-widest">&larr; Back to PluginProof Services</a>
             <h1 class="text-4xl md:text-5xl font-extrabold text-white mt-4 tracking-tight">
                 From MIDI to Sound: Building a Tone Generator Step-by-Step
             </h1>
@@ -57,107 +57,106 @@
             </p>
 
             <p>
-                A **tone generator** is simple in concept: it’s a type of **oscillator**. If you’re unfamiliar with that term, just think of something that repeats in cycles—kind of like a pulse or a wave. The complexity of any synthesizer comes down to how accurately and efficiently it runs these cycles.
+                I recently built a tone generator — my first real dive into making my own **JSFX plugin**. It’s kind of like a VST, but different — written in REAPER’s built-in scripting language for audio effects.
             </p>
             
-            <figure class="my-6">
-                <img src="./images/pulse-wave.jpg" alt="Illustration of a pulse waveform on a graph" class="w-full rounded-lg shadow-xl">
-                <figcaption class="text-center text-sm text-gray-500 mt-2">
-                    A hospital-style pulse waveform is a perfect real-world example of an oscillating signal.
-                </figcaption>
-            </figure>
+            <p>
+                A **tone generator** is simple in concept: it’s a type of **oscillator**. If you’re unfamiliar with that term, just think of something that repeats in cycles — kind of like a pulse or a wave.
+            </p>
+            
+          <figure class="my-6">
+    <img src="../myImages/oscilation.jpg" alt="Illustration of a pulse waveform on a graph" class="w-full rounded-lg shadow-xl">
+    <figcaption class="text-center text-sm text-gray-500 mt-2">
+        A hospital-style pulse waveform (like an EKG or heart monitor) is a perfect real-world example of an oscillating signal.
+    </figcaption>
+</figure>
 
             <h2>Step 1: User Input — Picking a Note (MIDI)</h2>
             
             <p>
-                First, the user picks a note using a slider or MIDI controller. This note is received in **MIDI format**, which is just a number between 0 and 127. For example, 60 is Middle C, 69 is A4 (A above middle C), etc. However, MIDI numbers aren’t in Hertz (the unit we use for frequency), so we need to **convert** that data.
+                First, the user picks a note using a slider. This note is in **MIDI format**, which is just a number between 0 and 127 — for example, 60 is Middle C, 69 is A4, etc. But MIDI numbers aren’t in Hertz (the unit we use for frequency), so we’ll need to **convert** that.
             </p>
 
             <h2>Step 2: Convert MIDI to Frequency (Hertz)</h2>
 
             <p>
-                To turn that MIDI note into a real pitch, we use a simple exponential formula. This formula finds the target pitch by shifting up or down from a standard reference frequency, usually $\mathbf{440 Hz}$ (the pitch of A4).
+                To turn that MIDI note into a real pitch, we use a simple formula. It says: Take **440 Hz** (which is the pitch of A4), and shift it up or down based on how far away the MIDI number is from 69.
             </p>
             
-            <div class="code-snippet">
-                $\text{frequency} = 440 \times 2^{\left(\frac{\text{MIDI} - 69}{12}\right)}$
+           <div class="my-6 text-center">
+             <img src="../myImages/midiToFreqeuncy.png" alt="MIDI to Frequency Conversion Formula" class="w-full max-w-sm mx-auto">
             </div>
 
             <p>
-                So if the user selects MIDI note 60 (C4), the formula figures out the vibrating speed we want—in this case, approximately $\mathbf{261.63 Hz}$. That’s the actual rate of vibration.
+                So for example, if the user selects MIDI note 60 (C4), the formula figures out what pitch that really is — in this case, about **261.63 Hz**. That’s the actual speed of vibration we want for our tone.
             </p>
 
             <h2>Step 3: Calculate Rotation Speed (Angular Velocity)</h2>
             
             <p>
-                Now that we know the frequency, we calculate how fast our waveform should move forward—this is called **angular velocity ($\omega$)**. It tells us how quickly we spin through one full wave cycle (a circle). This is crucial because it’s the number we use for every sample.
+                Now that we know the frequency, we calculate how fast our waveform should move forward — this is called **angular velocity ($\omega$)**. It just tells us how quickly we spin through a full wave cycle (like a circle).
+            </p>
+            
+            <p>
+                We calculate it using this formula:
             </p>
 
-            <div class="code-snippet">
-                $\omega = 2 \times \pi \times \frac{\text{frequency}}{\text{sampleRate}}$
-            </div>
+          <div class="my-6 text-center">
+    <img src="../myImages/omega.png" alt="Angular Velocity Formula" class="w-full max-w-sm mx-auto">
+</div>
 
             <p>
-                This calculation lets us figure out how much to advance our pointer each time the computer processes a tiny chunk of audio (a **sample**). Most modern systems process audio at a **sample rate** of $\mathbf{44,100}$ samples per second.
+                This calculation lets us figure out how much to move forward each time we process a tiny chunk of audio (called a **sample**). Most systems process about **44,100 samples per second**.
             </p>
-
+            
             <h2>Step 4: Keep Track of Where We Are — Phase</h2>
             
             <p>
-                To know what part of the wave we’re at, we use a variable called **phase ($\phi$)**. Think of it like a pointer moving around a circle. Every single sample, we move the phase forward just a little bit by adding the angular velocity ($\omega$):
+                To know what part of the wave we’re at, we use a variable called **phase**. Think of it like a pointer moving around a circle.
             </p>
-
-            <div class="code-snippet">
-                $\phi += \omega$
-            </div>
-
+            
             <p>
-                This is how we simulate time passing in very small, consistent steps. **Instability and sync bugs often happen here**—if the phase calculation is not sample-accurate across different DAWs, the sound will break.
-            </p>
-
-            <h2>Step 5: Create the Sound (Sine Function)</h2>
-
-            <p>
-                Finally, we take the current phase ($\phi$) and pass it into a sine function:
+                Every single sample, we move the phase forward just a little bit by adding the angular velocity:
             </p>
             
             <div class="code-snippet">
-                $\text{output} = \sin(\phi)$
+                <code>phase += omega;</code>
+            </div>
+
+            <p>
+                This is kind of like simulating time passing in very small steps — you’re adding a tiny amount every moment, which adds up over time.
+            </p>
+
+            <h2>Step 5: Create the Sound</h2>
+            
+            <p>
+                Finally, we take the current **phase** and pass it into a sine function:
+            </p>
+            
+            <div class="code-snippet">
+                <code>output = sin(phase);</code>
             </div>
             
             <p>
-                That simple math gives us a perfectly smooth wave—a **sine wave**—which is the sound! The faster we spin through the wave (higher frequency), the higher the perceived pitch.
+                That gives us a smooth wave — and that’s the sound! The faster we spin through the wave (higher frequency), the higher the pitch.
             </p>
-
-            <h2 class="text-3xl font-extrabold text-white">So What’s Really Happening?</h2>
             
-            <ul class="list-disc list-inside ml-4 text-lg space-y-2">
-                <li>The user picks a note (MIDI number).</li>
-                <li>We figure out how fast that note vibrates (Hertz).</li>
-                <li>We simulate that vibration by looping through tiny audio samples.</li>
-                <li>We create the wave by calculating points on a circle (a sine wave).</li>
+            <h2>So What’s Really Happening?</h2>
+            
+            <ul>
+                <li>The user picks a note</li>
+                <li>We figure out how fast that note vibrates</li>
+                <li>We simulate that vibration by looping through samples</li>
+                <li>And we create the wave by calculating points on a circle (a sine wave)</li>
             </ul>
 
-            <p class="mt-6">
-                It sounds like a lot, but it’s really just a few numbers being added together over and over again. Understanding this core loop is the key to both **building**—and more importantly—**breaking and testing** audio software efficiently.
-            </p>
-
-            <div class="cta-banner mt-12 text-center">
-                <h3 class="text-2xl font-extrabold text-white mb-3">
-                    Your Plugin's DSP is Complex. Don't Let It Fail on Step 4.
-                </h3>
-                <p class="text-lg text-gray-400 mb-6">
-                    Our **Cross-DAW Verification** tests these core principles (Phase, Sample Rate, and Performance) across five host environments to guarantee stability before launch.
+         <div class="mt-8 pt-4 border-t-4 border-green-400 bg-gray-900/50 p-4 rounded-b-lg">
+                <p class="text-lg font-bold text-center text-green-300">
+                    It sounds like a lot, but it’s really just a few numbers being added together over and over again — and that’s how digital sound is made!
                 </p>
-                <a href="index.html#contact" class="inline-block px-8 py-3 text-base font-bold text-gray-900 bg-green-400 rounded-full shadow-lg hover:bg-green-300 transition duration-300">
-                    Secure Your Audit Slot Now
-                </a>
             </div>
-        </div>
 
-        <footer class="text-center py-6 mt-10 text-gray-400 text-sm">
-            <a href="index.html" class="hover:text-green-400 transition-colors">PluginProof Home</a>
-            </footer>
+        </div>
     </div>
 </body>
 </html>
