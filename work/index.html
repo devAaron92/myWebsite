@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PluginProof: Project Work Samples</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles to enhance the dark theme and font */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a; /* Deep dark background */
+            color: #e5eeeb; /* Light text */
+        }
+        .report-section h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #a7f3d0; /* Mint color for headers */
+            border-bottom: 2px solid #2d2d2d;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .card {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="max-w-5xl mx-auto p-4 md:p-8 lg:p-10">
+        
+        <header class="mb-10 text-center py-6 card rounded-xl">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+                Work Samples
+            </h1>
+            <p class="text-lg text-gray-400 mt-2">Central hub for project documentation, audits, and deliverables.</p>
+        </header>
+
+        <!-- Audit Metadata / Personalization -->
+        <div class="mb-8 p-6 card rounded-xl grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-gray-400">
+            <div>
+                <strong class="text-green-400">Company Name:</strong> 
+                <p class="text-white">PluginProof</p>
+            </div>
+            <div>
+                <strong class="text-green-400">Founder/CEO:</strong> 
+                <p class="text-white">Aaron Shippey</p>
+            </div>
+            <div>
+                <strong class="text-green-400">Specialization:</strong> 
+                <p class="text-white">Tone Generator Development (JSFX)</p>
+            </div>
+        </div>
+
+        <div class="content-container text-gray-300">
+            
+            <!-- ====== SECTION 1: DRY RUN AUDIT REPORT (Top Priority) ====== -->
+            <h2 class="text-3xl font-extrabold text-green-400 mb-6 border-b-2 border-green-400 pb-2">
+                Latest Dry Run Audit: Tone Generator
+            </h2>
+
+            <!-- Summary Section -->
+            <section class="report-section mb-10 p-6 card rounded-xl">
+                <h2>Audit Summary & Scope</h2>
+                <p class="text-xl font-medium mb-4 border-l-4 border-green-400 pl-4 italic">
+                    This document summarizes the results of the initial dry run audit conducted on the latest tone generator code prior to full feature implementation. The scope covered core functionality, phase calculation, and MIDI conversion accuracy.
+                </p>
+                <textarea rows="4" class="w-full mt-4 p-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-green-500 focus:border-green-500 text-sm" placeholder="Enter high-level findings and overall assessment here..."></textarea>
+                
+                <!-- CORRECTED PDF LINK -->
+                <a 
+                    href="workSamples/Readiness%20Audit%20Dryrun.pdf" 
+                    target="_blank"
+                    class="mt-4 inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-black bg-green-400 hover:bg-green-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-150 ease-in-out">
+                    <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M14.5 4A2.5 2.5 0 0012 1.5H8A2.5 2.5 0 005.5 4v12.5A2.5 2.5 0 008 19.5h4a2.5 2.5 0 002.5-2.5V4zM7 4a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v12a.5.5 0 01-.5.5h-5a.5.5 0 01-.5-.5V4zM8.5 7.5a.5.5 0 000 1h3a.5.5 0 000-1h-3zm-1 3a.5.5 0 010 1h5a.5.5 0 010-1h-5zm0 3a.5.5 0 010 1h5a.5.5 0 010-1h-5z" clip-rule="evenodd" />
+                    </svg>
+                    View Readiness Audit Dryrun PDF
+                </a>
+                
+            </section>
+        </div>
+        
+        
+    </div>
+</body>
+</html>
