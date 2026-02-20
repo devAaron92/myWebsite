@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FL Studio Exploratory Testing Case Study</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 40px;
+      background-color: #f9f9f9;
+      color: #222;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    h1 {
+      border-bottom: 2px solid #2c3e50;
+      padding-bottom: 10px;
+    }
+    h2 {
+      margin-top: 40px;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    ul {
+      margin: 10px 0 15px 20px;
+    }
+    .success {
+      background-color: #d4edda;
+      border-left: 4px solid #28a745;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .friction {
+      background-color: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .technical {
+      background-color: #f8d7da;
+      border-left: 4px solid #dc3545;
+      padding: 10px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Introduction to FL Studio Case Study: Exploratory Testing</h1>
+
+<h2>Section 1: Introduction</h2>
+<img src="../myImages/Fl_Studio_Case_Study_Images/title.png" alt="Title Image">
+<p>This case study documents my first experience with FL Studio, approached from the perspective of a plugin QA tester. Coming from Logic and REAPER, my goal was to understand FL Studio's core workflow well enough to test plugins effectively in this environment.</p>
+<p>Rather than following tutorials initially, I explored FL Studio on my own. I documented what felt intuitive, where friction appeared, and how FL Studio's workflow philosophy differs from track-based DAWs. This case study focuses on four core areas: plugin and asset loading, FL Studio's pattern-based workflow, MIDI recording.</p>
+
+<h2>Section 2: First impressions</h2>
+<p>One feature I really appreciate in FL Studio is the hint panel in the top-left corner, just below the Escape and Maximize icons. Whatever element your mouse hovers over, the panel displays a short description of that tool or control.</p>
+<img src="../myImages/Fl_Studio_Case_Study_Images/Assign_to_Mixer.jpg" alt="Assign to Mixer" width="500">
+<p>It’s like having an integrated reference while exploring the DAW.</p>
+<p>Another feature that stood out immediately was how customizable the FL Studio interface is. Like in a physical studio, where your mixing console isn’t glued to a certain place, FL Studio allows you to resize, reposition, and organize nearly every panel.</p>
+<img src="" alt="">
+<p>After getting a feel for the general workflow, I wanted to find a plugin and open it. As a new user, I found it was clear locating the plugin type I wanted.</p>
+<img src="" alt="">
+<p>After I clicked on the browser icon, I found the plugin folder was organized clearly. I immediately knew how to find the plugin I was looking for. There’s the plugin database with ‘Effects’ and ‘Generator’ folders.</p>
+<p>Below that is a folder ‘Installed Plugins’. If you open that folder you’ll find every plugin installed on your machine whether it’s VST, VST3, AU, CLAP, or FRUITY. As a new user, I found it was clear locating the plugin type I wanted.</p>
+
+<h2>Section 4: Playlist</h2>
+<p>After several days of exploring FL Studio, I still haven't successfully recorded MIDI from my keyboard. This is my biggest friction point so far.</p>
+<p>Here's what I've tried:</p>
+<ul>
+  <li>I opened the Channel Rack, Mixer, and Playlist simultaneously.</li>
+  <img src="" alt="">
+  <li>I verified my MIDI keyboard was working (I could hear notes when I played). I checked my settings: both 'Enable MIDI remote control' and 'Enable MIDI output' were enabled.</li>
+  <img src="" alt="">
+  <li>In the Channel Rack, I selected the channel I wanted to record to. In the Mixer, I clicked 'arm disk recording' for the appropriate channel. Then I pressed the Record button in the top menu and played on my keyboard.</li>
+</ul>
+<div class="friction">
+  <strong>Result:</strong> No MIDI was played on playback. I've repeated this process multiple times with different approaches, selecting different channels, trying different mixer settings, enabling/disabling various options — but I haven't been able to capture MIDI input from my keyboard.
+</div>
+
+<div class="success">
+  <strong>What works:</strong> I can create MIDI patterns in the step sequencer. I can draw MIDI notes in the Piano Roll. I can record audio without issues.
+</div>
+
+<div class="friction">
+  <strong>What I can't figure out:</strong> How to record MIDI in real-time from my keyboard, the way I would in Logic or REAPER — arm a track, press record, play, and have the performance captured. This could be user error on my part, a hardware/driver issue, or a gap in my understanding of FL Studio's recording workflow. This may suggest a UX friction point.
+</div>
+
+<h2>Section 5: Channel rack</h2>
+<p>When I first explored the Channel Rack, I didn’t realize it functioned differently from tracks in other DAWs. While it lets you manage and sequence all your channels, these channels must be routed to the Mixer to apply FX or mix linearly.</p>
+<img src="" alt="">
+<p>This is where I found I manage all of my channels.</p>
+<p>Adding a new channel is simple and straightforward. You can simply click the + icon under the channels where you can add audio clips, MIDI, virtual instruments.</p>
+<p>Below the channel list is FL Studio’s step sequencer, one of its most recognizable features of the channel rack. It lets you create beats quickly in a grid-based, pattern-oriented workflow — no need to play in real time or record live performance to get a rhythm going.</p>
+<p>You won’t see third-party plugins in the menu, but luckily you can see ‘more plugins’ at the top and you will see both third-party and native FL Studio plugins.</p>
+
+<h2>Section 6: The mixer</h2>
+<img src="" alt="">
+<p>In the mixer console, I noticed the track latency button. I haven’t used this feature before, so I’m experimenting to understand how it affects workflow and timing.</p>
+<p>When I initially came to the mixing console, I wasn’t sure how the ‘enable fx’ button worked. It turned out I needed to load a plugin in the corresponding slot.</p>
+<p>It also took me a while to successfully load an FX plugin in the Mixer. At first, I went to the Mixer panel, which seemed like the obvious place to add FX, but I didn’t see a plugin option in the pop-up menu, which confused me. After exploring further, I clicked the panel again and discovered a second menu with many more options, including a ‘Load Plugin’ function at the top.</p>
+
+<h2>Section 7: Technical Issues Encountered</h2>
+<div class="technical">
+  <strong>Format-Specific Crash: Surge XT (VST3)</strong><br>
+  FL Studio 25.2.3.4889 trial version (Apple Silicon) crashes consistently when applying filters in Surge XT's VST3 version on macOS Sonoma 14.4. Error: EAccessViolation. <br>
+  However, the Audio Units (AU) version of Surge XT works without issues in the same environment. This suggests a VST3 bridge compatibility issue in FL Studio trial on Apple Silicon, rather than a problem with Surge XT itself.
+</div>
+
+<h2>Section 8: Final thoughts</h2>
+<p>Exploring FL Studio showed me that a DAW workflow doesn’t need to be fixed — there can be countless ways to approach creating music. One feature I wish FL Studio would allow is minimizing the main window, so it doesn’t always take up the entire screen.</p>
+
+</body>
+</html>
