@@ -20,7 +20,7 @@ The same convenience applies when removing automation lanes. Instead of removing
 
 ## Improper Gain Staging: Clipping
 
-As I had the audio and midi for a couple of tracks I started working on automating. I suddenly noticed there was no sound coming from my speakers. When I checked REAPER, I saw that the master track had muted itself. This happened when the master gain was set to +12 dB. When I lowered it, the problem went away. I tried reproducing the issue again, but this time when the master gain was at +12 dB it didn’t mute.
+As I had the audio and midi for a couple of tracks I started working on automating. I suddenly noticed there was no sound coming from my speakers. When I checked REAPER, I saw that the master track had muted itself. This happened when the master gain was set to +12 dB. When I lowered it, the problem went away.
 
 At first, I thought the issue might be related to the automation I was working with. I had several automation lanes open and was experimenting with filter cutoff modulation. But that didn’t really make sense.
 
@@ -40,12 +40,16 @@ I also ran into an unexpected issue while using Valhalla Supermassive. I opened 
 
 When I went back to the automation window, I realized there was a parameter controlling the plugin’s bypass state. Once I removed that automation, the plugin worked normally again.
 
+## Audio Routing Confusion
 
-The third thing I ran into today happened when I plugged in my headphones and couldn’t hear anything. I checked my track settings, monitoring, and routing, and everything looked fine. It turned out the fix was straightforward: go to Options → Preferences → Audio → Device, and enable external headphones. Once I switched that on, the audio came through immediately.
+When I plugged in my headphones I couldn't hear any audio coming through.
 
+I checked my track settings, monitoring, and routing, and everything looked fine. It turned out the fix was straightforward: go to Options → Preferences → Audio → Device, and enable external headphones. Once I switched that on, the audio came through immediately.
 
+<div class="bg-gray-800 border-l-4 border-green-400 p-6 rounded-lg mt-10 mb-10">
+  <p class="text-green-300 font-semibold text-lg mb-2">Final Thoughts</p>
+  <p class="text-gray-300 leading-relaxed">
+    Today’s session reinforced just how powerful REAPER’s automation system can be — once you understand the shortcuts and workflow, you can work much faster and more efficiently.
 
-![Screenshot](/myImages/reaperAutomationImages/screenshot-2026-03-17-1332.png)
-
-
-> **Final Thoughts:** Today’s session reinforced just how powerful REAPER’s automation system can be — once you understand the shortcuts and workflow, you can work much faster and more efficiently.
+  </p>
+</div>
