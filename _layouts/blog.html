@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - PluginProof</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #e5e7eb;
+        }
+        a {
+            color: #a7f3d0;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #34d399;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="max-w-4xl mx-auto p-4 md:p-8 lg:p-12">
+        <h1 class="text-4xl font-extrabold text-white mb-10">{{ page.title }}</h1>
+        <ul class="space-y-6">
+            {% for post in site.posts %}
+                <li>
+                    <a href="{{ post.url }}" class="text-green-400 hover:text-green-300 text-xl font-semibold">
+                        {{ post.title }}
+                    </a>
+                    <p class="text-gray-400 text-sm mt-1">{{ post.date | date: "%b %d, %Y" }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
