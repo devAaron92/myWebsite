@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Things I Learned in REAPER Today - PluginProof</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #1a1a1a;
+      color: #e5e7eb;
+    }
+    .content-container h2, .content-container h3 {
+      color: #a7f3d0; /* Mint headers */
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .content-container p {
+      margin-bottom: 1rem;
+      line-height: 1.75;
+    }
+    .code-snippet {
+      background-color: #0d0d0d;
+      padding: 1rem;
+      border-left: 4px solid #a7f3d0;
+      overflow-x: auto;
+      margin-bottom: 1.5rem;
+      font-family: monospace;
+      color: #d1d5db;
+    }
+    .cta-banner {
+      background-color: #252525;
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid #3d3d3d;
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <div class="max-w-4xl mx-auto p-4 md:p-8 lg:p-12">
+    
+    <header class="mb-10 text-center">
+      <a href="../index.html" class="text-green-400 hover:text-green-300 text-sm font-semibold uppercase tracking-widest">&larr; Back to PluginProof Services</a>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white mt-4 tracking-tight">
+        Three Things I Learned in REAPER Today
+      </h1>
+      <p class="text-lg text-gray-400 mt-2">By Aaron Shippey | March 17, 2026</p>
+    </header>
+
+    <div class="content-container text-gray-300">
+
+      <p class="text-xl font-medium mb-8 border-l-4 border-green-400 pl-4 italic">
+        Small discoveries in REAPER can reveal a lot about how DAWs behave, from automation quirks to audio routing surprises. Here’s what I ran into today.
+      </p>
+
+      <h2>1. Master Track Muting at High Gain</h2>
+
+      <p>
+        I suddenly noticed there was no sound coming from my speakers. When I checked REAPER, I saw that the master track had muted itself. This happened when the master gain was set to <strong>+12 dB</strong>. When I lowered it, the problem went away. I tried reproducing the issue again, but this time when the master gain was at +12 dB it didn’t mute.
+      </p>
+
+      <p>
+        At first, I thought the issue might be related to automation. I had several automation lanes open and was experimenting with filter cutoff modulation. But that wasn’t the cause.
+      </p>
+
+      <p>
+        I also considered whether too many automation lanes on my guitar track might be causing this. But many projects have dozens or hundreds of lanes, and my CPU usage was very low. So it wasn’t performance-related.
+      </p>
+
+      <p>
+        Eventually, I realized the master gain was at +12 dB. Lowering it to around +6 dB solved the problem. It was likely clipping because the master gain was maxed out.
+      </p>
+
+      <h2>2. Automation Controlling Plugin Bypass</h2>
+
+      <p>
+        I ran into an unexpected issue while using Valhalla Supermassive. I opened the automation window, selected several parameters, and drew some automation. Then I wondered why I wasn’t hearing anything. I checked the FX window and saw that the plugin wasn’t enabled. When I tried to click the checkbox, it wouldn’t let me enable it. I then looked at the plugin window itself and noticed it said <strong>“Bypassed”</strong> at the top.
+      </p>
+
+      <p>
+        When I went back to the automation window, I realized there was an automation parameter controlling the plugin’s bypass state. Once I removed that automation, the plugin worked normally again.
+      </p>
+
+      <p>
+        One thing I love about REAPER is how flexible automation workflows are. You can select multiple parameters at once in the <strong>Trim</strong> window by holding <strong>Shift</strong>, then hide or remove them quickly. This makes working with complex plugins much easier.
+      </p>
+
+      <h2>3. Headphones Not Outputting Audio</h2>
+
+      <p>
+        The third issue occurred when I plugged in my headphones but couldn’t hear anything. I checked the track, monitoring, and routing — everything looked fine. The fix was straightforward: go to <strong>Options → Preferences → Audio → Device</strong> and enable external headphones. Audio came through immediately.
+      </p>
+
+      <div class="mt-8 pt-4 border-t-4 border-green-400 bg-gray-900/50 p-4 rounded-b-lg">
+        <p class="text-lg font-bold text-center text-green-300">
+          REAPER has many hidden quirks — sometimes automation or audio routing can produce unexpected behavior, but exploring them is a great way to understand the DAW more deeply.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
