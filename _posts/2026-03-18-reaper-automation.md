@@ -4,7 +4,11 @@ title: "Reaper Automation"
 date: 2026-03-18
 ---
 
-I had a good session in REAPER today after getting the hang of automation, here is what I learned in the process.
+> I had a good session in REAPER today after getting the hang of automation, here is what I learned in the process.
+
+## Adding and removing automation lanes fast in REAPER
+
+
 Automation is really flexible in REAPER as you get the hang of it. I found that it is convenient, you can add many automation lanes at once. Just click Trim to open the automation window. From there, you can hold the shift key and select as many parameters as you want to enable them all at once. I find this especially helpful when working with plugins that have many parameters.
 
 ![Trim](/myImages/reaperAutomationImages/trim.png)
@@ -13,6 +17,8 @@ Automation is really flexible in REAPER as you get the hang of it. I found that 
 The same convenience applies when removing automation lanes. Instead of removing them individually—which can be time-consuming—you can open the Trim window, hold Shift, select the parameters you want to remove, right-click, and choose Hide All.
 
 ![Add Automation](/myImages/reaperAutomationImages/addAutomation.png)
+
+## Improper Gain Staging: Clipping
 
 As I had the audio and midi for a couple of tracks I started working on automating. I suddenly noticed there was no sound coming from my speakers. When I checked REAPER, I saw that the master track had muted itself. This happened when the master gain was set to +12 dB. When I lowered it, the problem went away. I tried reproducing the issue again, but this time when the master gain was at +12 dB it didn’t mute.
 
@@ -27,6 +33,8 @@ Eventually I noticed that the master gain was set to +12 dB. When I lowered it t
 
 ![Gain Staging](/myImages/reaperAutomationImages/gainStaging.png)
 
+## Watch out for Bypassing Parameter
+
 I also ran into an unexpected issue while using Valhalla Supermassive. I opened the automation window, selected several parameters, and drew some automation. Then I wondered why I wasn’t hearing anything. I checked the FX window and saw that the plugin wasn’t enabled. When I tried to click the checkbox, it wouldn’t let me enable it. I then looked at the plugin window itself and noticed it said “Bypassed” at the top.
 
 
@@ -38,3 +46,6 @@ The third thing I ran into today happened when I plugged in my headphones and co
 
 
 ![Screenshot](/myImages/reaperAutomationImages/screenshot-2026-03-17-1332.png)
+
+
+> **Final Thoughts:** Today’s session reinforced just how powerful REAPER’s automation system can be — once you understand the shortcuts and workflow, you can work much faster and more efficiently.
