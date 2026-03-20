@@ -24,15 +24,6 @@ From there, you can hold the shift key and select as many parameters as you want
 
 The same convenience applies when removing automation lanes. Instead of removing them individually—which can be time-consuming—you can open the Trim window, hold Shift, select the parameters you want to remove, right-click, and choose Hide All.
 
-{% if page.video %}
-<div class="my-6">
-  <video width="100%" controls class="rounded-lg shadow-lg">
-    <source src="{{ page.video }}" type="video/quicktime">
-    Your browser does not support the video tag.
-  </video>
-</div>
-{% endif %}
-
 
 ## Improper Gain Staging: Clipping
 
@@ -59,6 +50,28 @@ When I went back to the automation window, I realized there was a parameter cont
 When I plugged in my headphones I couldn't hear any audio coming through.
 
 I checked my track settings, monitoring, and routing, and everything looked fine. It turned out the fix was straightforward: go to Options → Preferences → Audio → Device, and enable external headphones. Once I switched that on, the audio came through immediately.
+
+<style>
+  a.boombox-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1db954;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.1s;
+  }
+  a.boombox-link:hover {
+    transform: scale(1.05);
+  }
+</style>
+
+<p>
+  Here is the multi-track I worked on while I was working on this project: 
+  <a class="boombox-link" href="https://app.boombox.io/app/file/f7GYRKMP29zqmgNm7W9KrLEdenAjQ316a" target="_blank" rel="noopener noreferrer">
+    Check it out on Boombox
+  </a>
+</p>
 
 <div class="bg-gray-800 border-l-4 border-green-400 p-6 rounded-lg mt-10 mb-10">
   <p class="text-green-300 font-semibold text-lg mb-2">Final Thoughts</p>
