@@ -2,24 +2,29 @@
 layout: post
 title: "Reaper Automation"
 date: 2026-03-18
+video: /videos/addAutomation2.mp4
 ---
-
 > Automation in REAPER can feel confusing at first, but it’s very flexible once you get the hang of it — here are some tips I picked up today.
 
 ## Adding and removing automation lanes fast in REAPER
 
+REAPER allows you to add many automation lanes at once. 
 
-REAPER allows you to add many automation lanes at once. Just click Trim to open the automation window. 
+First you'll want to make sure to add your track.
 
+Then, Just click Trim to open the automation window. 
 
 ![Trim](/myImages/reaperAutomationImages/trim.png)
 
+After you click 'Trim' you wil lsee the envelopes window open. You can select one parameter at a time or as many as you'd like all at once. 
 
-From there, you can hold the shift key and select as many parameters as you want to enable them all at once. I find this especially helpful when working with plugins that have many parameters.
+There, you can hold the shift key and select as many parameters as you want to enable them all at once. I find this especially helpful when working with plugins that have many parameters.
 
 
-![Add Automation](/myImages/reaperAutomationImages/addAutomation.png)
-
+<video width="100%" controls>
+  <source src="/videos/addAutomation2.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 The same convenience applies when removing automation lanes. Instead of removing them individually—which can be time-consuming—you can open the Trim window, hold Shift, select the parameters you want to remove, right-click, and choose Hide All.
 

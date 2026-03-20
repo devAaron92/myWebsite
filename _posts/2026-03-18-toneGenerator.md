@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tone Generator Guide"
-date: 2026-03-18
+date: 2025-07-27
 ---
 I recently built a tone generator—my first real dive into making my own JSFX plugin. It's a fundamental exercise, but it proves the core concept behind all digital sound: simulation.
 
