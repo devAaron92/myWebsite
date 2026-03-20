@@ -4,7 +4,7 @@ title: "Reaper Automation"
 date: 2026-03-18
 ---
 
-> I had a good session in REAPER today after getting the hang of automation, here is what I learned in the process.
+> Automation in REAPER can feel confusing at first, but it’s very flexible once you get the hang of it — here are some tips I picked up today.
 
 ## Adding and removing automation lanes fast in REAPER
 
