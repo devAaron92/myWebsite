@@ -28,7 +28,6 @@ At first, I thought the issue might be related to the automation I was working w
 
 Then I wondered if I had simply opened too many automation lanes on the guitar track. But that couldn’t be the problem either. Many projects have dozens or even hundreds of automation lanes across tracks, and my CPU usage was very low. So it wasn’t a performance issue.
 
-
 Eventually I noticed that the master gain was set to +12 dB. When I lowered it to around +6 dB, the master track stopped muting itself. I did not properly manage gain staging by pushing the master gain to +12dB, which likely caused clipping during playback.
 
 ![Gain Staging](/myImages/reaperAutomationImages/gainStaging.png)
@@ -36,7 +35,6 @@ Eventually I noticed that the master gain was set to +12 dB. When I lowered it t
 ## Watch out for Bypassing Parameter
 
 I also ran into an unexpected issue while using Valhalla Supermassive. I opened the automation window, selected several parameters, and drew some automation. Then I wondered why I wasn’t hearing anything. I checked the FX window and saw that the plugin wasn’t enabled. When I tried to click the checkbox, it wouldn’t let me enable it. I then looked at the plugin window itself and noticed it said “Bypassed” at the top.
-
 
 When I went back to the automation window, I realized there was a parameter controlling the plugin’s bypass state. Once I removed that automation, the plugin worked normally again.
 
@@ -50,6 +48,8 @@ I checked my track settings, monitoring, and routing, and everything looked fine
   <p class="text-green-300 font-semibold text-lg mb-2">Final Thoughts</p>
   <p class="text-gray-300 leading-relaxed">
     Today’s session reinforced just how powerful REAPER’s automation system can be — once you understand the shortcuts and workflow, you can work much faster and more efficiently.
+
+    If you're a plugin devleoporor company who needs an extra hand with QA, reach out to Aaron at aaron@pluginproof.com. Thanks for reading, and have a great day!
 
   </p>
 </div>
