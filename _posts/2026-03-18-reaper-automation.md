@@ -9,7 +9,7 @@ date: 2026-03-18
 ## Adding and removing automation lanes fast in REAPER
 
 
-Automation is really flexible in REAPER as you get the hang of it. I found that it is convenient, you can add many automation lanes at once. Just click Trim to open the automation window. From there, you can hold the shift key and select as many parameters as you want to enable them all at once. I find this especially helpful when working with plugins that have many parameters.
+REAPER allows you to add many automation lanes at once. Just click Trim to open the automation window. From there, you can hold the shift key and select as many parameters as you want to enable them all at once. I find this especially helpful when working with plugins that have many parameters.
 
 ![Trim](/myImages/reaperAutomationImages/trim.png)
 
