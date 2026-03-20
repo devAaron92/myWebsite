@@ -2,7 +2,6 @@
 layout: post
 title: "Reaper Automation"
 date: 2026-03-18
-video: /videos/addAutomation.mov
 ---
 
 > Automation in REAPER can feel confusing at first, but it’s very flexible once you get the hang of it — here are some tips I picked up today.
