@@ -2,6 +2,7 @@
 layout: post
 title: "Reaper Automation"
 date: 2026-03-18
+video: /videos/addAutomation.mov
 ---
 
 > Automation in REAPER can feel confusing at first, but it’s very flexible once you get the hang of it — here are some tips I picked up today.
@@ -9,14 +10,29 @@ date: 2026-03-18
 ## Adding and removing automation lanes fast in REAPER
 
 
-REAPER allows you to add many automation lanes at once. Just click Trim to open the automation window. From there, you can hold the shift key and select as many parameters as you want to enable them all at once. I find this especially helpful when working with plugins that have many parameters.
+REAPER allows you to add many automation lanes at once. Just click Trim to open the automation window. 
+
 
 ![Trim](/myImages/reaperAutomationImages/trim.png)
 
 
-The same convenience applies when removing automation lanes. Instead of removing them individually—which can be time-consuming—you can open the Trim window, hold Shift, select the parameters you want to remove, right-click, and choose Hide All.
+From there, you can hold the shift key and select as many parameters as you want to enable them all at once. I find this especially helpful when working with plugins that have many parameters.
+
 
 ![Add Automation](/myImages/reaperAutomationImages/addAutomation.png)
+
+
+The same convenience applies when removing automation lanes. Instead of removing them individually—which can be time-consuming—you can open the Trim window, hold Shift, select the parameters you want to remove, right-click, and choose Hide All.
+
+{% if page.video %}
+<div class="my-6">
+  <video width="100%" controls class="rounded-lg shadow-lg">
+    <source src="{{ page.video }}" type="video/quicktime">
+    Your browser does not support the video tag.
+  </video>
+</div>
+{% endif %}
+
 
 ## Improper Gain Staging: Clipping
 
