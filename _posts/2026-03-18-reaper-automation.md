@@ -85,3 +85,76 @@ I checked my track settings, monitoring, and routing, and everything looked fine
 
   </p>
 </div>
+
+<div id="comments-container">
+  <h3>Comments</h3>
+
+  <!-- Comment form -->
+  <form id="comment-form">
+    <input type="text" id="comment-name" placeholder="Your name (optional)" />
+    <textarea id="comment-message" placeholder="Write a comment..." required></textarea>
+    <button type="submit">Post Comment</button>
+  </form>
+
+  <!-- Display comments -->
+  <div id="comments-list"></div>
+</div>
+
+<script type="module">
+  import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+  // ---- Replace these with your Supabase project values ----
+  const supabaseUrl = 'https://aeffcodmwsxhjseferdf.supabase.co'
+  const supabaseKey = 'sb_publishable_zb3sXiUcvLA1oZW4HmCSwQ_n_DcmTD0'
+  const supabase = createClient(supabaseUrl, supabaseKey)
+
+  const form = document.getElementById('comment-form')
+  const nameInput = document.getElementById('comment-name')
+  const messageInput = document.getElementById('comment-message')
+  const list = document.getElementById('comments-list')
+
+  // Fetch and display comments
+  async function fetchComments() {
+    const { data, error } = await supabase
+      .from('comments')
+      .select('*')
+      .order('created_at', { ascending: true })
+    if (error) {
+      console.error(error)
+      return
+    }
+
+    list.innerHTML = ''
+    data.forEach(c => {
+      const name = c.name || 'Anonymous'
+      const div = document.createElement('div')
+      div.innerHTML = `<p><strong>${name}:</strong> ${c.message}</p>`
+      list.appendChild(div)
+    })
+  }
+
+  // Submit new comment
+  form.addEventListener('submit', async e => {
+    e.preventDefault()
+    const name = nameInput.value.trim()
+    const message = messageInput.value.trim()
+    if (!message) return
+
+    const { error } = await supabase
+      .from('comments')
+      .insert([{ name, message }])
+    if (error) {
+      console.error(error)
+      return
+    }
+
+    // Clear form
+    messageInput.value = ''
+    nameInput.value = ''
+
+    fetchComments()
+  })
+
+  // Initial load
+  fetchComments()
+</script>
