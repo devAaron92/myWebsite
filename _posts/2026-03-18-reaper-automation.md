@@ -67,7 +67,7 @@ I checked my track settings, monitoring, and routing, and everything looked fine
 
 ## Multitrack on BoomBox
 <p>
-  Here is the multi-track I worked on while I was working on this project: 
+  <strong> I’ve attached the multi-track I developed during this project </strong>  
   <a class="boombox-link" href="https://app.boombox.io/app/file/f7GYRKMP29zqmgNm7W9KrLEdenAjQ316a" target="_blank" rel="noopener noreferrer">
     Check it out on Boombox
   </a>
