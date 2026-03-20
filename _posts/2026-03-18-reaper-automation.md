@@ -35,8 +35,6 @@ As I had the audio and midi for a couple of tracks I started working on automati
 
 At first, I thought the issue might be related to the automation I was working with. I had several automation lanes open and was experimenting with filter cutoff modulation. But that didn’t really make sense.
 
-![Filter Cutoff](/myImages/reaperAutomationImages/filterCutoff.png)
-
 Then I wondered if I had simply opened too many automation lanes on the guitar track. But that couldn’t be the problem either. Many projects have dozens or even hundreds of automation lanes across tracks, and my CPU usage was very low. So it wasn’t a performance issue.
 
 Eventually I noticed that the master gain was set to +12 dB. When I lowered it to around +6 dB, the master track stopped muting itself. I did not properly manage gain staging by pushing the master gain to +12dB, which likely caused clipping during playback.

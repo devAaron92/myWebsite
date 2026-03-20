@@ -4,15 +4,27 @@ title: Blog
 permalink: /blog/
 ---
 <div class="max-w-4xl mx-auto p-4 md:p-8 lg:p-12">
-  <h1 class="text-4xl font-extrabold text-white mb-10">{{ page.title }}</h1>
+  <header class="mb-12">
+    <h1 class="text-4xl font-extrabold text-white mb-4">{{ page.title }}</h1>
+    <p class="text-gray-300 text-lg italic border-l-4 border-green-500 pl-4">
+      Here are the tips I share as I experience with audio plugins and music production.
+    </p>
+  </header>
 
-  <ul class="space-y-6">
+  <ul class="space-y-10">
     {% for post in site.posts %}
-      <li>
-        <a href="{{ post.url }}" class="text-green-400 hover:text-green-300 text-xl font-semibold">
+      <li class="group">
+        <a href="{{ post.url }}" class="text-green-400 group-hover:text-green-300 text-2xl font-bold transition-colors">
           {{ post.title }}
         </a>
-        <p class="text-gray-400 text-sm mt-1">{{ post.date | date: "%b %d, %Y" }}</p>
+        <p class="text-gray-500 text-sm mt-1 uppercase tracking-widest">
+          {{ post.date | date: "%B %d, %Y" }}
+        </p>
+        {% if post.excerpt %}
+          <div class="text-gray-400 mt-3 line-clamp-2">
+            {{ post.excerpt | strip_html }}
+          </div>
+        {% endif %}
       </li>
     {% endfor %}
   </ul>
