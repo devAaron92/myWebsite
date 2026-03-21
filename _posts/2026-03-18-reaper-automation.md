@@ -81,7 +81,7 @@ I checked my track settings, monitoring, and routing, and everything looked fine
   <p class="text-gray-300 leading-relaxed">
     Today’s session reinforced just how powerful REAPER’s automation system can be — once you understand the shortcuts and workflow, you can work much faster and more efficiently.
 
-    If you're a plugin devleoporor company who needs an extra hand with QA, reach out to Aaron at aaron@pluginproof.com. Thanks for reading, and have a great day!
+    If you're a plugin dev or audio plugin company who needs an extra hand with QA, reach out to Aaron at aaron@pluginproof.com. Thanks for reading, and have a great day!
 
   </p>
 </div>
