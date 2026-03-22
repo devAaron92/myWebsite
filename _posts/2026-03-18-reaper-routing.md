@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "REAPER Routing"
-date: 2026-03-18
+date: 2026-03-22
 video:
 ---
 
@@ -16,11 +16,16 @@ Right-click the track, then go to Track color → Set tracks to custom color
 
 REAPER does not come with dedicated aux tracks. Any track can be audio, midi , or aux. To make an aux track. Just add the number of aux tracks you’ll need by clicking add tracks at the bottom of the TCP. 
 
-![add bus](videos/videos_REAPER_routing)
+![Add Bus Screenshot](/myImages/videos_REAPER_routing/addBus.png)
 
 You can enable it by going to:
  Options → Themes → Theme Adjuster
 From there, navigate to Track controls from the main-menu panel on the left. 
+
+<video width="100%" controls>
+  <source src="/myImages/videos_REAPER_routing/addBus.mov" type="video/quicktime">
+  Your browser does not support the video tag.
+</video>
 
 You’ll see a table with different track elements. Find the Route button column, then click the corresponding cell to disable the “hide” option. This will make the Route button visible on your tracks. 
 [insert themeAdjustor.mov]
@@ -33,6 +38,11 @@ One thing I found frustrating about REAPER's routing is that you can't select mu
 A practical workaround I thought I’d invented (turns out I wasn’t first!): it’s often faster to click “Add all tracks” and then delete the ones you don’t actually want on that bus.
 
 ! [Watch demo video](/myImages/videos_REAPER_routing/add_receive.mov)
+
+<video width="100%" controls>
+  <source src="/myImages/videos_REAPER_routing/add_receive.mov" type="video/quicktime">
+  Your browser does not support the video tag.
+</video>
 
 Sidechaining in REAPER can confuse users who are used to Pro Tools or other DAWs that handle routing automatically. In REAPER, each sidechain can have its own aux input, giving you more control and flexibility.
 To set up which aux input a track is sent to:
