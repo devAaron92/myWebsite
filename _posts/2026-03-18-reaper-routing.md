@@ -19,13 +19,8 @@ REAPER does not come with dedicated aux tracks. Any track can be audio, midi , o
 ![Add Bus Screenshot](/myImages/videos_REAPER_routing/addBus.png)
 
 You can enable it by going to:
- Options → Themes → Theme Adjuster
+ reOptions → Themes → Theme Adjuster
 From there, navigate to Track controls from the main-menu panel on the left. 
-
-<video width="100%" controls>
-  <source src="/myImages/videos_REAPER_routing/addBus.mov" type="video/quicktime">
-  Your browser does not support the video tag.
-</video>
 
 You’ll see a table with different track elements. Find the Route button column, then click the corresponding cell to disable the “hide” option. This will make the Route button visible on your tracks. 
 [insert themeAdjustor.mov]
@@ -39,10 +34,6 @@ A practical workaround I thought I’d invented (turns out I wasn’t first!): i
 
 ! [Watch demo video](/myImages/videos_REAPER_routing/add_receive.mov)
 
-<video width="100%" controls>
-  <source src="/myImages/videos_REAPER_routing/add_receive.mov" type="video/quicktime">
-  Your browser does not support the video tag.
-</video>
 
 Sidechaining in REAPER can confuse users who are used to Pro Tools or other DAWs that handle routing automatically. In REAPER, each sidechain can have its own aux input, giving you more control and flexibility.
 To set up which aux input a track is sent to:
