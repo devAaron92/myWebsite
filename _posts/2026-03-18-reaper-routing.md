@@ -12,7 +12,7 @@ Right-click the track, then go to Track color → Set tracks to custom color
  (Mac: you can also Ctrl+click if you’re using a trackpad).
 [insert colorCode.mov]
 
-#### Bus Tracks
+### Bus Tracks
 
 REAPER does not come with dedicated aux tracks. Any track can be audio, midi , or aux. To make an aux track. Just add the number of aux tracks you’ll need by clicking add tracks at the bottom of the TCP. 
 
@@ -27,7 +27,7 @@ From there, navigate to Track controls from the main-menu panel on the left.
 You’ll see a table with different track elements. Find the Route button column, then click the corresponding cell to disable the “hide” option. This will make the Route button visible on your tracks. 
 [insert themeAdjustor.mov]
 
-#Add Track To Bus
+### Add Track To Bus
 
 
 Now that you’ve got your aux tracks, we’re ready to send the tracks to their dedicated bus. We can go to the route button in the TCP. 
@@ -43,12 +43,18 @@ A practical workaround I thought I’d invented (turns out I wasn’t first!): i
 </video>
 
 
-## Side Chaining: Flexibility and control in REAPER
+### Side Chaining: Flexibility and control in REAPER
 
 
 Sidechaining in REAPER can confuse users who are used to Pro Tools or other DAWs that handle routing automatically. In REAPER, each sidechain can have its own aux input, giving you more control and flexibility.
 To set up which aux input a track is sent to:
 Click Route on the bus or plugin track you want to send audio to.
+
+<video width="100%" controls>
+  <source src="/videos/videos_REAPER_routing/sideChain.mp4.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 Under Receives, find the track you want to send to this bus.
 Next to the track, you’ll see a box labeled 1/2 with an arrow pointing to the right. This represents the aux input channels the track is sending to.
 You can change this to 3/4, 5/6, etc. depending on which aux input you want the track to use.
