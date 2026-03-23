@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "FL Studio Exploratory Testing Case Study"
-date: 2026-03-23
+date: 2026-02-23
 ---
 
 ← Back to PluginProof Services  
@@ -28,22 +28,21 @@ This case study focuses on four core areas:
 
 One feature I really appreciate in FL Studio is the **hint panel** in the top-left corner, just below the Escape and Maximize icons. Whatever element your mouse hovers over, the panel displays a short description of that tool or control.
 
-*Hint Panel*
+![Hint Panel](/myImages/Fl_Studio_Case_Study_Images/hint_panel.png)
 
 It’s like having an integrated reference while exploring the DAW.
 
 Another feature that stood out immediately was how customizable the FL Studio interface is. Like in a physical studio, where your mixing console isn’t glued to a certain place, FL Studio allows you to resize, reposition, and organize nearly every panel.
 
-*FL Workflow*
+![Hint Panel](/myImages/Fl_Studio_Case_Study_Images/hint_panel.png)
 
 After getting a feel for the general workflow, I wanted to find and open a plugin. As a new user, locating the plugin type I wanted felt clear and intuitive.
 
-*Browser*
+![Hint Panel](/myImages/Fl_Studio_Case_Study_Images/browser.png)
 
 After clicking on the browser icon, I found the plugin folder was organized clearly. I immediately knew how to find what I was looking for. The plugin database includes ‘Effects’ and ‘Generator’ folders.
 
-*Plugin Database*
-
+![Hint Panel](/myImages/Fl_Studio_Case_Study_Images/pluginDatabase.png)
 ---
 
 ## Section 3: Playlist & MIDI Recording Friction
@@ -55,10 +54,10 @@ After several days of exploring FL Studio, I still haven't successfully recorded
 - Opened the Channel Rack, Mixer, and Playlist simultaneously  
 - Verified my MIDI keyboard was working (I could hear notes when playing)  
 - Checked settings:
-  - Enable MIDI remote control ✅  
-  - Enable MIDI output ✅  
+  - Enable MIDI remote control   
+  - Enable MIDI output 
 
-*Enable MIDI*
+![Hint Panel](/myImages/Fl_Studio_Case_Study_Images/enable_MIDI.png)
 
 - Selected the target channel in the Channel Rack  
 - Armed disk recording in the Mixer  
@@ -99,7 +98,7 @@ While it lets you manage and sequence channels, they must be routed to the Mixer
 - Apply FX  
 - Mix linearly  
 
-*Assign to Mixer*
+![Hint Panel](/myImages/Fl_Studio_Case_Study_Images/Assign_to_Mixer.jpg)
 
 This is where I manage all of my channels.
 
@@ -116,13 +115,13 @@ It allows for:
 
 No need for real-time performance to build rhythm.
 
-*Add Channel*
+![Hint Panel](/myImages/Fl_Studio_Case_Study_Images/add_channel.png)
 
 ---
 
 ## Section 5: The Mixer
 
-*Enable FX*
+![Hint Panel](/myImages/Fl_Studio_Case_Study_Images/enable_fx.png)
 
 In the mixer console, I noticed the **track latency button**, which I haven’t used before. I’m currently experimenting to understand how it impacts timing and workflow.
 
