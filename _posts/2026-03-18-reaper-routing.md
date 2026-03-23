@@ -29,22 +29,18 @@ You’ll see a table with different track elements. Find the Route button column
 
 ### Add Track To Bus
 
-
 Now that you’ve got your aux tracks, we’re ready to send the tracks to their dedicated bus. We can go to the route button in the TCP. 
 
 One thing I found frustrating about REAPER's routing is that you can't select multiple send tracks at once — you have to add them one by one via 'Add new receive'.
 
 A practical workaround I thought I’d invented (turns out I wasn’t first!): it’s often faster to click “Add all tracks” and then delete the ones you don’t actually want on that bus.
 
-
 <video width="100%" controls>
   <source src="/videos/videos_REAPER_routing/addAllChannels.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-
 ### Side Chaining: Flexibility and control in REAPER
-
 
 Sidechaining in REAPER can confuse users who are used to Pro Tools or other DAWs that handle routing automatically. In REAPER, each sidechain can have its own aux input, giving you more control and flexibility.
 To set up which aux input a track is sent to:
@@ -61,9 +57,7 @@ You can change this to 3/4, 5/6, etc. depending on which aux input you want the 
 
 In REAPER, you can assign as many aux inputs as you like, giving each track its own dedicated sidechain path if needed. This is more flexible than other DAWs but can initially feel confusing.
 
-
 ### Routing Matrix: Signal Flow From a Distance
-
 
 Finally, I am going to access the REAPER Routing Matrix to verify that the signal flow is working exactly as intended for this sidechain setup.
 
