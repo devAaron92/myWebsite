@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Reaper Automation"
+title: "Automation In REAPER: First Steps"
 date: 2026-03-18
 video: /videos/addAutomation2.mp4
 ---
