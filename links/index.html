@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Links | PluginProof</title>
+
+<style>
+  :root {
+    --bg: #0b0f14;
+    --panel: #111824;
+    --border: rgba(255,255,255,0.08);
+    --text: rgba(255,255,255,0.9);
+    --muted: rgba(255,255,255,0.6);
+    --accent: #7c5cff;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 20px;
+  }
+
+  /* Header */
+  .header {
+    margin-bottom: 40px;
+  }
+
+  .title {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .subtitle {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  /* Grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+
+  /* Card */
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s ease;
+    display: block;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(124,92,255,0.4);
+  }
+
+  .card-title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .card-desc {
+    margin-top: 6px;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+
+  .tag {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 60px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  a {
+    color: inherit;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="title">Links</div>
+    <div class="subtitle">
+      A simple collection of tools, writing, and places I share updates.
+    </div>
+  </div>
+
+  <!-- Links -->
+  <div class="grid">
+
+    <a class="card" href="https://pluginproof.com/blog">
+      <div class="card-title">Blog</div>
+      <div class="card-desc">Articles on audio plugins, DAWs, and production workflows.</div>
+      <div class="tag">Writing</div>
+    </a>
+
+    <a class="card" href="https://pluginproof.com/guides">
+      <div class="card-title">Plugin Guides</div>
+      <div class="card-desc">How-to guides for Logic, REAPER, EQ, compression, and more.</div>
+      <div class="tag">Education</div>
+    </a>
+
+    <a class="card" href="https://pluginproof.com/newsletter">
+      <div class="card-title">Newsletter</div>
+      <div class="card-desc">Weekly breakdowns of plugins, tools, and audio workflows.</div>
+      <div class="tag">Updates</div>
+    </a>
+
+    <a class="card" href="https://pluginproof.com/tools">
+      <div class="card-title">Tools</div>
+      <div class="card-desc">Small utilities for producers and plugin developers.</div>
+      <div class="tag">Utilities</div>
+    </a>
+
+    <a class="card" href="https://github.com/yourname">
+      <div class="card-title">GitHub</div>
+      <div class="card-desc">Code, experiments, and audio scripting projects.</div>
+      <div class="tag">Code</div>
+    </a>
+
+    <a class="card" href="https://pluginproof.com/contact">
+      <div class="card-title">Contact</div>
+      <div class="card-desc">Work inquiries, collaborations, and freelance requests.</div>
+      <div class="tag">Work</div>
+    </a>
+
+  </div>
+
+  <div class="footer">
+    © PluginProof — Built for audio creators and plugin developers.
+  </div>
+
+</div>
+
+</body>
+</html>
