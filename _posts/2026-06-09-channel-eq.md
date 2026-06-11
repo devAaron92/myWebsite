@@ -1,12 +1,18 @@
+
+---
+layout: post
+title: "An Introduction to Channel EQ"
+---
+
 <img src="/myImages/channelEq.png" alt="Channel EQ interface" style="width:100%;">
 
 Channel EQ is a multiband EQ plugin with low and high cuts, lo and hi shelves, and four bell filters.  Channel EQ comes configured with many presets if you want to work quickly whether it be hats, vocals, keys, synths and horns.  
 
-##Channel EQ vs Linear Phase EQ  
+## Channel EQ vs Linear Phase EQ  
 
 Logic's Channel EQ and Linear Phase EQ have very similar interfaces, displays, analyzers, and workflow features. The main difference is the filter technology: Channel EQ uses minimum-phase filters, while Linear Phase EQ uses linear-phase filters that preserve phase relationships. What this means is you can preserve more frequencies, but it can also cause smearing  
 
-##Filter Types: Left to right
+## Filter Types: Left to right
 
 <video width="100%" controls>
   <source src="/videos/eqfilters.mp4" type="video/mp4">
@@ -56,10 +62,10 @@ If you’re not using an analyzer it’s good to keep it off according to Apple,
 
 The analyzer can be set to Pre EQ or Post EQ. This lets you choose whether the spectrum display analyzes the signal before or after the EQ processing.  
 
-##Q Couple
+## Q Couple
 
 Lastly Another useful tool you might find helpful is the q couple. Q-Couple links the Q (bandwidth) to the gain of the EQ band, so that the width of the affected frequency range adjusts automatically.
 
-##Final Thoughts
+## Final Thoughts
 
 I wrote this article to help anyone just getting started with Channel EQ in Logic Pro. For the complete reference guide you can always refer to Apple's official documentation here — [link]. This is meant to get you oriented quickly with the key features and what they actually do in practice.
