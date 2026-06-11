@@ -10,7 +10,12 @@ Channel EQ is a multiband EQ plugin with low and high cuts, lo and hi shelves, a
 
 ## Channel EQ vs Linear Phase EQ  
 
-Logic's Channel EQ and Linear Phase EQ have very similar interfaces, displays, analyzers, and workflow features. The main difference is the filter technology: Channel EQ uses minimum-phase filters, while Linear Phase EQ uses linear-phase filters that preserve phase relationships. What this means is you can preserve more frequencies, but it can also cause smearing  
+Logic's Channel EQ and Linear Phase EQ have very similar interfaces, displays, analyzers, and workflow features. The main difference is the filter technology: Channel EQ uses minimum-phase filters, while Linear Phase EQ uses linear-phase filters that preserve phase relationships. What this means is you can preserve more frequencies, but it can also cause smearing. 
+
+A key benefit of minimal phase EQ is it's low-latency, CPU-efficient, and musically natural-sounding due to its minimum-phase design, making it ideal for fast everyday mixing. 
+
+
+low-latency, CPU-efficient, and musically natural-sounding due to its minimum-phase design, making it ideal for fast everyday mixing and recording
 
 ## Filter Types: Left to right
 
