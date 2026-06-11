@@ -14,9 +14,6 @@ Logic's Channel EQ and Linear Phase EQ have very similar interfaces, displays, a
 
 A key benefit of minimal phase EQ is it's low-latency, CPU-efficient, and musically natural-sounding due to its minimum-phase design, making it ideal for fast everyday mixing. 
 
-
-low-latency, CPU-efficient, and musically natural-sounding due to its minimum-phase design, making it ideal for fast everyday mixing and recording
-
 ## Filter Types: Left to right
 
 <video width="100%" controls>
