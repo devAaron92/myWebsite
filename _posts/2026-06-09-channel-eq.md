@@ -68,4 +68,5 @@ Lastly Another useful tool you might find helpful is the q couple. Q-Couple link
 
 ## Final Thoughts
 
-I wrote this article to help anyone just getting started with Channel EQ in Logic Pro. For the complete reference guide you can always refer to Apple's official documentation here — [link]. This is meant to get you oriented quickly with the key features and what they actually do in practice.
+For the complete reference guide you can always refer to Apple's official documentation here — 
+<a href="https://support.apple.com/guide/logicpro/channel-eq-overview-lgcef1edce5b/mac">Apple Channel EQ Documentation</a>.
