@@ -1,9 +1,7 @@
-
 ---
 layout: post
 title: "An Introduction to Channel EQ"
 ---
-
 <img src="/myImages/channelEq.png" alt="Channel EQ interface" style="width:100%;">
 
 Channel EQ is a multiband EQ plugin with low and high cuts, lo and hi shelves, and four bell filters.  Channel EQ comes configured with many presets if you want to work quickly whether it be hats, vocals, keys, synths and horns.  
