@@ -55,7 +55,7 @@ Automate X steadily + Y rapidly simultaneously.
 Automate X rapidly + Y steadily simultaneously.
 
 
-#### Result & Interpretation
+### Result & Interpretation
 
 **Result:** I did not observe any clicks, pops, glitches, sudden level changes, or other audible discontinuities during any of the tested movements.
 
