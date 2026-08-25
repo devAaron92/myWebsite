@@ -42,83 +42,18 @@ That means the processing system has to handle changing convolution states over 
 
 ### Test
 
-<ol>
-  <li>
-    Put the sustained Surge XT pad through Environments.
-  </li>
+1. Put the sustained Surge XT pad through Environments.
+2. Pick one Environment and leave it unchanged.
+3. Listen for any clicks, pops, glitches, sudden level changes, or anything that could be an audio artifact.
+4. Automate X position steadily from one side to the other.
+5. Automate Y position steadily from top to bottom.
+6. Automate X + Y steadily from one side/top to the other side/bottom.
+7. Automate X position rapidly from one side to the other.
+8. Automate Y position rapidly from top to bottom.
+9. Automate X + Y rapidly from one side/top to the other side/bottom.
+10. Automate X steadily + Y rapidly simultaneously.
+11. Automate X rapidly + Y steadily simultaneously.
 
-  <li>
-    Pick one Environment and leave it unchanged.
-  </li>
-
-  <li>
-    Listen for any clicks, pops, glitches, sudden level changes, or anything that could be an audio artifact.
-  </li>
-
-  <li>
-    Automate X position steadily from one side to the other.
-    <video controls width="100%">
-      <source src="/videos/environmentsVidsMp4/xSteady.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </li>
-
-  <li>
-    Automate Y position steadily from top to bottom.
-    <video controls width="100%">
-      <source src="/videos/environmentsVidsMp4/ySteady.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </li>
-
-  <li>
-    Automate X + Y steadily from one side/top to the other side/bottom.
-    <video controls width="100%">
-      <source src="/videos/environmentsVidsMp4/xSteady+ySteady.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </li>
-
-  <li>
-    Automate X position rapidly from one side to the other.
-    <video controls width="100%">
-      <source src="/videos/environmentsVidsMp4/xRapid.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </li>
-
-  <li>
-    Automate Y position rapidly from top to bottom.
-    <video controls width="100%">
-      <source src="/videos/environmentsVidsMp4/yRapid.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </li>
-
-  <li>
-    Automate X + Y rapidly from one side/top to the other side/bottom.
-    <video controls width="100%">
-      <source src="/videos/environmentsVidsMp4/xRapid+yRapid.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </li>
-
-  <li>
-    Automate X steadily + Y rapidly simultaneously.
-    <video controls width="100%">
-      <source src="/videos/environmentsVidsMp4/xSteady+yRapid.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </li>
-
-  <li>
-    Automate X rapidly + Y steadily simultaneously.
-    <video controls width="100%">
-      <source src="/videos/environmentsVidsMp4/xRapid+ySteady.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </li>
-</ol>
 
 <h4>Result & Interpretation</h4>
 
