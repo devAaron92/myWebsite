@@ -120,7 +120,7 @@ That means the processing system has to handle changing convolution states over 
   </li>
 </ol>
 
- #### Result & Interpretation
+<h4>Result & Interpretation</h4>
 
 **Result:** I did not observe any clicks, pops, glitches, sudden level changes, or other audible discontinuities during any of the tested movements.
 
