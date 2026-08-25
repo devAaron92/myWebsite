@@ -50,45 +50,41 @@ That means the processing system has to handle changing convolution states over 
 
 # -> Automate X position steadily from one side to the other.
 
-<figure>
-  <video controls width="100%">
-    <source src="/videos/environmentsVidsMp4/xSteady.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <figcaption>X position — steady movement</figcaption>
-</figure>
+<video controls width="100%" style="margin: 20px 0;">
+  <source src="/videos/environmentsVidsMp4/xSteady.mp4" type="video/mp4">
+</video>
 
 # -> Automate Y position steadily from top to bottom.
 
-<video controls width="100%">
-  <source src="/videos/environmentsVidsMp4/xSteady.mp4" type="video/mp4">
-  Your browser does not support the video tag.
+<video controls width="100%" style="margin: 20px 0;">
+  <source src="/videos/environmentsVidsMp4/ySteady.mp4" type="video/mp4">
 </video>
+
 
 # -> Automate X + Y steadily from one side/top to the other side/bottom.
 
-<video controls width="100%">
+<video controls width="100%" style="margin: 20px 0;">
   <source src="/videos/environmentsVidsMp4/ySteady.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 # -> Automate X position rapidly from one side to the other.
 
-<video controls width="100%">
+<video controls width="100%" style="margin: 20px 0;">
   <source src="/videos/environmentsVidsMp4/xRapid.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 # -> Automate Y position rapidly from top to bottom.
 
-<video controls width="100%">
+<video controls width="100%" style="margin: 20px 0;">
   <source src="/videos/environmentsVidsMp4/yRapid.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 # -> Automate X + Y rapidly from one side/top to the other side/bottom.
 
-<video controls width="100%">
+<video controls width="100%" style="margin: 20px 0;">
   <source src="/videos/environmentsVidsMp4/xRapid+yRapid.mp4
 " type="video/mp4">
   Your browser does not support the video tag.
@@ -96,7 +92,7 @@ That means the processing system has to handle changing convolution states over 
 
 # -> Automate X steadily + Y rapidly simultaneously.
 
-<video controls width="100%">
+<video controls width="100%" style="margin: 20px 0;">
   <source src="/videos/environmentsVidsMp4/xSteady+yRapid.mp4
 " type="video/mp4">
   Your browser does not support the video tag.
@@ -104,7 +100,7 @@ That means the processing system has to handle changing convolution states over 
 
 # -> Automate X rapidly + Y steadily simultaneously.
 
-<video controls width="100%">
+<video controls width="100%" style="margin: 20px 0;">
   <source src="/videos/environmentsVidsMp4/xRapid+ySteady.mp4
 " type="video/mp4">
   Your browser does not support the video tag.
