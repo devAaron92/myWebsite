@@ -6,6 +6,8 @@ date: 2026-08-25
 
 ### Risk-Based Testing
 
+Today, I tested Environments. It's a recently released plugin by AudioThing. AudioThing descrbes it as convolution engine that combines multiple impulse responses, while allowing the user to move through the captured environment and apply modulation. 
+
 Testing audio plugins requires developers to focus on areas that are high risk. It’s not feasible to test everything in a plugin, release times and budgets are a thing.
 
 That’s why we prioritize failures where we think they are most likely to occur.
@@ -17,7 +19,7 @@ What failure here would actually matter to the user, and why do we have reason t
 
 This isn't a utility plugin where an occasional click might be annoying but peripheral.
 
-Environments are fundamentally about transforming an incoming musical signal through changing acoustic spaces.
+Environments is fundamentally about transforming an incoming musical signal through changing acoustic spaces.
 The manual repeatedly emphasizes:
 * movement through space
 * changing spatial character
