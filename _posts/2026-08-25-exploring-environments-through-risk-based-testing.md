@@ -19,7 +19,7 @@ What failure here would actually matter to the user, and why do we have reason t
 
 This isn't a utility plugin where an occasional click might be annoying but peripheral.
 
-Environments is fundamentally about transforming an incoming musical signal through changing acoustic spaces.
+Environments is fundamentally about transforming an incoming musical signal through changing acoustic spaces:
 
  **-> The manual repeatedly emphasizes:**
  **-> Movement through space**
