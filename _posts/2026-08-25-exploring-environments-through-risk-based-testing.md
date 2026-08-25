@@ -21,12 +21,12 @@ This isn't a utility plugin where an occasional click might be annoying but peri
 
 Environments is fundamentally about transforming an incoming musical signal through changing acoustic spaces.
 
-# The manual repeatedly emphasizes:
-# movement through space
-# changing spatial character
-# modulation and motion
-# multiple impulse responses
-# an additional convolution layer
+ **-> The manual repeatedly emphasizes:**
+ **-> Movement through space**
+ **-> Changing spatial character**
+ **-> Modulation and motion**
+ **-> Multiple impulse responses**
+ **-> An additional convolution layer**
 
 ### Risk Hypothesis
 
