@@ -4,14 +4,14 @@ title: Exploring 'Environments' Through Risk-Based Testing
 date: 2026-08-25
 ---
 
-## Risk-Based Testing
+### Risk-Based Testing
 
 Testing audio plugins requires developers to focus on areas that are high risk. It’s not feasible to test everything in a plugin, release times and budgets are a thing.
 
 That’s why we prioritize failures where we think they are most likely to occur.
 
 
-## Identifying the Risk
+### Identifying the Risk
 
 What failure here would actually matter to the user, and why do we have reason to believe it could happen?
 
@@ -25,7 +25,7 @@ The manual repeatedly emphasizes:
 * multiple impulse responses
 * an additional convolution layer
 
-## Risk Hypothesis
+### Risk Hypothesis
 
 Continuous movement through the captured environment could produce discontinuities or other unwanted audible artifacts as the spatial characteristics change.
 
@@ -38,54 +38,87 @@ Environments is describing something more like:
 
 That means the processing system has to handle changing convolution states over time.
 
-## Test
+### Test
 
-1. Put the sustained Surge XT pad through Environments.
-2. Pick one Environment and leave it unchanged.
-3. Listen for any clicks, pops, glitches, sudden levels of changes, or anything that could be an audio artifact
-4. Automate X position steadily from one side to the other.
-<video controls width="100%">
-  <source src="/videos/environmentsVidsMp4/xSteady.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-5. Automate Y position steadily from top to bottom.
-<video controls width="100%">
-  <source src="/videos/environmentsVidsMp4/ySteady.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-6. Automate X + Y steadily from one side/top to the other side/bottom.
-<video controls width="100%">
-  <source src="/videos/environmentsVidsMp4/xSteady+ySteady.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-7. Automate X position rapidly from one side to the other.
-<video controls width="100%">
-  <source src="/videos/environmentsVidsMp4/xRapid.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-8. Automate Y position rapidly from top to bottom.
-<video controls width="100%">
-  <source src="/videos/environmentsVidsMp4/yRapid.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-9. Automate X + Y rapidly from one side/top to the other side/bottom.
-<video controls width="100%">
-  <source src="/videos/environmentsVidsMp4/xRapid+yRapid.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-10. Automate X steadily + Y rapidly simultaneously.
-<video controls width="100%">
-  <source src="/videos/environmentsVidsMp4/xSteady+ySteady.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-11. Automate X rapidly + Y steadily simultaneously.
-<video controls width="100%">
-  <source src="/videos/environmentsVidsMp4/xRapid+ySteady.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<ol>
+  <li>
+    Put the sustained Surge XT pad through Environments.
+  </li>
 
+  <li>
+    Pick one Environment and leave it unchanged.
+  </li>
 
- ## Result & Interpretation
+  <li>
+    Listen for any clicks, pops, glitches, sudden level changes, or anything that could be an audio artifact.
+  </li>
+
+  <li>
+    Automate X position steadily from one side to the other.
+    <video controls width="100%">
+      <source src="/videos/environmentsVidsMp4/xSteady.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </li>
+
+  <li>
+    Automate Y position steadily from top to bottom.
+    <video controls width="100%">
+      <source src="/videos/environmentsVidsMp4/ySteady.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </li>
+
+  <li>
+    Automate X + Y steadily from one side/top to the other side/bottom.
+    <video controls width="100%">
+      <source src="/videos/environmentsVidsMp4/xSteady+ySteady.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </li>
+
+  <li>
+    Automate X position rapidly from one side to the other.
+    <video controls width="100%">
+      <source src="/videos/environmentsVidsMp4/xRapid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </li>
+
+  <li>
+    Automate Y position rapidly from top to bottom.
+    <video controls width="100%">
+      <source src="/videos/environmentsVidsMp4/yRapid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </li>
+
+  <li>
+    Automate X + Y rapidly from one side/top to the other side/bottom.
+    <video controls width="100%">
+      <source src="/videos/environmentsVidsMp4/xRapid+yRapid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </li>
+
+  <li>
+    Automate X steadily + Y rapidly simultaneously.
+    <video controls width="100%">
+      <source src="/videos/environmentsVidsMp4/xSteady+yRapid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </li>
+
+  <li>
+    Automate X rapidly + Y steadily simultaneously.
+    <video controls width="100%">
+      <source src="/videos/environmentsVidsMp4/xRapid+ySteady.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </li>
+</ol>
+
+ #### Result & Interpretation
 
 **Result:** I did not observe any clicks, pops, glitches, sudden level changes, or other audible discontinuities during any of the tested movements.
 
