@@ -50,10 +50,13 @@ That means the processing system has to handle changing convolution states over 
 
 # -> Automate X position steadily from one side to the other.
 
-<video controls width="100%">
-  <source src="/videos/environmentsVidsMp4/xSteady.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<figure>
+  <video controls width="100%">
+    <source src="/videos/environmentsVidsMp4/xSteady.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <figcaption>X position — steady movement</figcaption>
+</figure>
 
 # -> Automate Y position steadily from top to bottom.
 
