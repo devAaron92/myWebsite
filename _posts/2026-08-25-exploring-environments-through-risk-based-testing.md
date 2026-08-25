@@ -43,15 +43,30 @@ That means the processing system has to handle changing convolution states over 
 ### Test
 
 Put the sustained Surge XT pad through Environments.
+
+<video controls width="100%">
+  <source src="/videos/environmentsVidsMp4/xSteady.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 Pick one Environment and leave it unchanged.
+
 Listen for any clicks, pops, glitches, sudden level changes, or anything that could be an audio artifact.
+
 Automate X position steadily from one side to the other.
+
 Automate Y position steadily from top to bottom.
+
 Automate X + Y steadily from one side/top to the other side/bottom.
+
 Automate X position rapidly from one side to the other.
+
 Automate Y position rapidly from top to bottom.
+
 Automate X + Y rapidly from one side/top to the other side/bottom.
+
 Automate X steadily + Y rapidly simultaneously.
+
 Automate X rapidly + Y steadily simultaneously.
 
 
