@@ -42,33 +42,70 @@ That means the processing system has to handle changing convolution states over 
 
 ### Test
 
-Put the sustained Surge XT pad through Environments.
+# -> Put the sustained Surge XT pad through Environments.
+
+# -> Pick one Environment and leave it unchanged.
+
+# -> Listen for any clicks, pops, glitches, sudden level changes, or anything that could be an audio artifact.
+
+# -> Automate X position steadily from one side to the other.
 
 <video controls width="100%">
   <source src="/videos/environmentsVidsMp4/xSteady.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-Pick one Environment and leave it unchanged.
+# -> Automate Y position steadily from top to bottom.
 
-Listen for any clicks, pops, glitches, sudden level changes, or anything that could be an audio artifact.
+<video controls width="100%">
+  <source src="/videos/environmentsVidsMp4/xSteady.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
-Automate X position steadily from one side to the other.
+# -> Automate X + Y steadily from one side/top to the other side/bottom.
 
-Automate Y position steadily from top to bottom.
+<video controls width="100%">
+  <source src="/videos/environmentsVidsMp4/ySteady.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
-Automate X + Y steadily from one side/top to the other side/bottom.
+# -> Automate X position rapidly from one side to the other.
 
-Automate X position rapidly from one side to the other.
+<video controls width="100%">
+  <source src="/videos/environmentsVidsMp4/xRapid.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
-Automate Y position rapidly from top to bottom.
+# -> Automate Y position rapidly from top to bottom.
 
-Automate X + Y rapidly from one side/top to the other side/bottom.
+<video controls width="100%">
+  <source src="/videos/environmentsVidsMp4/yRapid.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
-Automate X steadily + Y rapidly simultaneously.
+# -> Automate X + Y rapidly from one side/top to the other side/bottom.
 
-Automate X rapidly + Y steadily simultaneously.
+<video controls width="100%">
+  <source src="/videos/environmentsVidsMp4/xRapid+yRapid.mp4
+" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
+# -> Automate X steadily + Y rapidly simultaneously.
+
+<video controls width="100%">
+  <source src="/videos/environmentsVidsMp4/xSteady+yRapid.mp4
+" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+# -> Automate X rapidly + Y steadily simultaneously.
+
+<video controls width="100%">
+  <source src="/videos/environmentsVidsMp4/xRapid+ySteady.mp4
+" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Result & Interpretation
 
