@@ -20,12 +20,13 @@ What failure here would actually matter to the user, and why do we have reason t
 This isn't a utility plugin where an occasional click might be annoying but peripheral.
 
 Environments is fundamentally about transforming an incoming musical signal through changing acoustic spaces.
-The manual repeatedly emphasizes:
-* movement through space
-* changing spatial character
-* modulation and motion
-* multiple impulse responses
-* an additional convolution layer
+
+# The manual repeatedly emphasizes:
+# movement through space
+# changing spatial character
+# modulation and motion
+# multiple impulse responses
+# an additional convolution layer
 
 ### Risk Hypothesis
 
@@ -34,9 +35,12 @@ Continuous movement through the captured environment could produce discontinuiti
 The plugin describes a convolution engine that combines multiple impulse responses, while allowing the user to move through the captured environment and apply modulation. The resulting audio therefore changes as the spatial parameters change over time. That creates a plausible opportunity for discontinuities or other unwanted artifacts to occur during those transitions.
 
 A conventional convolution reverb might essentially be:
-        -> Input → fixed impulse response → output
+        
+# -> Input → fixed impulse response → output
+
 Environments is describing something more like:
-        -> Input → changing spatial position / changing IR characteristics → output
+       
+# -> Input → changing spatial position / changing IR characteristics → output
 
 That means the processing system has to handle changing convolution states over time.
 
