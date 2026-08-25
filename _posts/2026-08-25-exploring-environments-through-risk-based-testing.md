@@ -42,17 +42,17 @@ That means the processing system has to handle changing convolution states over 
 
 ### Test
 
-1. Put the sustained Surge XT pad through Environments.
-2. Pick one Environment and leave it unchanged.
-3. Listen for any clicks, pops, glitches, sudden level changes, or anything that could be an audio artifact.
-4. Automate X position steadily from one side to the other.
-5. Automate Y position steadily from top to bottom.
-6. Automate X + Y steadily from one side/top to the other side/bottom.
-7. Automate X position rapidly from one side to the other.
-8. Automate Y position rapidly from top to bottom.
-9. Automate X + Y rapidly from one side/top to the other side/bottom.
-10. Automate X steadily + Y rapidly simultaneously.
-11. Automate X rapidly + Y steadily simultaneously.
+Put the sustained Surge XT pad through Environments.
+Pick one Environment and leave it unchanged.
+Listen for any clicks, pops, glitches, sudden level changes, or anything that could be an audio artifact.
+Automate X position steadily from one side to the other.
+Automate Y position steadily from top to bottom.
+Automate X + Y steadily from one side/top to the other side/bottom.
+Automate X position rapidly from one side to the other.
+Automate Y position rapidly from top to bottom.
+Automate X + Y rapidly from one side/top to the other side/bottom.
+Automate X steadily + Y rapidly simultaneously.
+Automate X rapidly + Y steadily simultaneously.
 
 
 #### Result & Interpretation
