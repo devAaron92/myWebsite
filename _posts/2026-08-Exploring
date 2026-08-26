@@ -67,12 +67,6 @@ That means the processing system has to handle changing convolution states over 
 <video controls width="100%">
   <source src="/videos/environmentsVidsMp4/yRapid.mp4" type="video/mp4">
   Your browser does not support the video tag.
-</video>
- Automate X + Y rapidly from one side/top to the other side/bottom.
-<video controls width="100%">
-  <source src="/videos/environmentsVidsMp4/xRapid+yRapid.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
  Automate X rapidly + Y steadily simultaneously.
 <video controls width="100%">
   <source src="/videos/environmentsVidsMp4/xRapid+ySteady.mp4" type="video/mp4">
