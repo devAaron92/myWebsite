@@ -70,6 +70,13 @@ So the basic chain is:
 
 ### n → t → e^-kt
 
+### Final Thoughts
+
+This exploratory work is central to how I'm building the technical foundation for PluginProof. I don't build DSP or develop audio plugins myself; my focus is on testing software and providing specialized technical QA for the developers who do.
+
+The goal here isn't to become the engineer writing signal processing algorithms from scratch. Instead, it's about understanding the underlying technology deeply enough to ask sharper questions, design more rigorous test suites, spot unexpected software behavior, and deliver clear, actionable QA documentation.
+
+
 Working through this program made me realize that there's quite a bit more going on underneath what initially looks like a simple sequence of numbers.
 
 <p style="font-family: Arial, sans-serif; font-size: 16px; margin-top: 24px;">
