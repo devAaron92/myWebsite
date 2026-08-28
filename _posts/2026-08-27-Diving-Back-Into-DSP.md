@@ -10,12 +10,11 @@ A fundamental concept in digital audio is representing a continuous-time signal 
 
 The first step was to establish Euler's number:
 
-```python
-e = 2.718281828459045
+### e = 2.718281828459045
 
 The exponential decay function I'm using is:
 
-e-kt
+### e^-kt
 
 where k is the decay-rate constant and t is time.
 
@@ -29,19 +28,19 @@ The goal was simple: iterate through the sample index so that I could calculate 
 
 Because the first index in a discrete sequence is 0, the first calculation occurs at:
 
-n = 0
+### n = 0
 
 With a sample rate of 10 samples per second (fs = 10), we calculate time from the sample index:
 
-t = n / fs
+### t = n / fs
 
 So for the first sample:
 
-t = 0 / 10 = 0
+### t = 0 / 10 = 0
 
 We then evaluate the exponential decay function at that time:
 
-e-5(0) = e0 = 1
+### e^-5(0) = e^0 = 1
 
 So the first envelope value is 1.
 
@@ -49,26 +48,26 @@ On the next iteration, n is incremented from 0 to 1.
 
 Now:
 
-t = 1 / 10 = 0.1
+### t = 1 / 10 = 0.1
 
 So we're evaluating the same exponential decay function at 0.1 seconds:
 
-e-5(0.1) = e-0.5 ≈ 0.6065
+### e^-5(0.1) = e^-0.5 ≈ 0.6065
 
 So our first two envelope values are approximately:
 
-1, 0.6065
+### 1, 0.6065
 
 This was where the distinction between the sample index, time, and envelope value became much clearer to me.
 
 n tells us which sample we're at. The sample rate tells us how many samples occur per second. From those two things, we can determine the time represented by that sample:
 
-t = n / fs
+### t = n / fs
 
 Then we use that time in the exponential decay function to calculate the envelope value.
 
 So the basic chain is:
 
-n → t → e-kt
+### n → t → e^-kt
 
 Working through this program made me realize that there's quite a bit more going on underneath what initially looks like a simple sequence of numbers.
