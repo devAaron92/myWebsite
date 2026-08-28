@@ -81,6 +81,6 @@ Working through this program made me realize that there's quite a bit more going
 
 <p style="font-family: Arial, sans-serif; font-size: 16px; margin-top: 24px;">
   <a href="https://github.com/devAaron92/dsp_projects/blob/main/env.py" target="_blank" rel="noopener noreferrer" style="color: #2563eb; font-weight: 600; text-decoration: underline; text-underline-offset: 4px;">
-    View the Python code on GitHub &rarr;
+    Link to GitHub &rarr;
   </a>
 </p>
