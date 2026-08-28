@@ -42,7 +42,7 @@ We then evaluate the exponential decay function at that time:
 
 ### e^-5(0) = e^0 = 1
 
-So the first envelope value is 1.
+The first envelope value is 1.
 
 On the next iteration, n is incremented from 0 to 1.
 
@@ -50,11 +50,11 @@ Now:
 
 ### t = 1 / 10 = 0.1
 
-So we're evaluating the same exponential decay function at 0.1 seconds:
+Next, we're evaluating the same exponential decay function at 0.1 seconds:
 
 ### e^-5(0.1) = e^-0.5 ≈ 0.6065
 
-So our first two envelope values are approximately:
+Which means our first two envelope values are approximately:
 
 ### 1, 0.6065
 
@@ -66,7 +66,7 @@ n tells us which sample we're at. The sample rate tells us how many samples occu
 
 Then we use that time in the exponential decay function to calculate the envelope value.
 
-So the basic chain is:
+The basic chain is:
 
 ### n → t → e^-kt
 
