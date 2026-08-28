@@ -71,4 +71,4 @@ So the basic chain is:
 
 n → t → e-kt
 
-It's a very small program, but working through it made me realize that there's quite a bit more going on underneath what initially looks like a simple sequence of numbers.
+Working through this program made me realize that there's quite a bit more going on underneath what initially looks like a simple sequence of numbers.
