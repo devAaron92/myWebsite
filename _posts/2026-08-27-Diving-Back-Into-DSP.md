@@ -71,3 +71,5 @@ So the basic chain is:
 ### n → t → e^-kt
 
 Working through this program made me realize that there's quite a bit more going on underneath what initially looks like a simple sequence of numbers.
+
+<p><a href="https://github.com/devAaron92/dsp_projects/blob/main/env.py">View the Python code on GitHub</a></p>
