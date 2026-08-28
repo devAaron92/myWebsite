@@ -6,7 +6,7 @@ date: 2026-08-27
 
 Today I dove back into DSP for a moment. I wanted to keep it simple and focus on the fundamentals.
 
-A fundamental concept in digital audio is representing a continuous-time signal as a discrete sequence of samples. The project I worked on today was a simple implementation of an exponential decay function. I wanted to understand how something as basic as an envelope can be represented mathematically and then implemented digitally.
+A core concept in digital audio is representing a continuous-time signal as a discrete sequence of samples. The project I worked on today was a simple implementation of an exponential decay function. I wanted to understand how something as basic as an envelope can be represented mathematically and then implemented digitally.
 
 The first step was to establish Euler's number:
 
